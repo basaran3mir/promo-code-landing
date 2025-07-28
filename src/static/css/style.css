@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+button {
+    transition: background 0.3s ease;
+}
+
+.hero-section {
+    background-image: url(../images/stadium-bgn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 821px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero-section .hero-image {
+    width: 150px;
+    height: 150px;
+}
+
+.hero-section .hero-logo {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section .hero-content {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.hero-section .hero-content h1 {
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .hero-content h2 {
+    margin-bottom: 25px;
+}
+
+.hero-section .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.start-button {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.start-button:hover {
+    background: #ddd;
+}
+
+.section {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin: -100px auto 50px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-section p {
+    margin-bottom: 20px;
+}
+
+.form-section form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section form h2 {
+    margin-bottom: 10px;
+}
+
+.form-section form input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.form-section form button {
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.form-section form button:hover {
+    background: #444;
+}
+
+.campaign-section {
+    z-index: 3;
+    margin: 0 auto;
+}
+
+.campaign-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.detail-item {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.detail-item .detail-item-top {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.detail-item .detail-item-header {
+    font-weight: 600;
+    flex: 1;
+    position: relative;
+}
+
+.detail-item-header::after {
+    content: "+";
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.detail-item-bottom {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.detail-item.open .detail-item-bottom {
+    max-height: 200px;
+}
+
+.detail-item.open .detail-item-header::after {
+    content: "-";
+}
+
+.help {
+    font-style: italic;
+    background: #ffffff;
+    padding: 40px 20px;
+    margin: -25px auto 0;
+    position: relative;
+    z-index: 3;
+    border-radius: 8px;
+    max-width: 275px;
+    margin-bottom: 50px;
+    border: 4px solid black;
+    box-shadow: -10px -10px 0px rgba(0, 0, 0, 1);
+    transform: skewX(-5deg);
+}
+
+.help a {
+    color: black;
+    text-decoration: underline;
+}
+
+.help a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .hero-section .hero-content {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+}
