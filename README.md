@@ -1,15 +1,25 @@
-# Promotional Landing Page
+# Promo Code Landing Page
 
-This repository contains the source code of a promotional landing page designed for showcasing a specific product, service, or campaign.
+This repository contains the source code of a promotional landing page designed to showcase a product or service-specific campaign with clear messaging and an engaging interface.
 
-## 📌 Disclaimer
-
-This project is shared solely for **demonstration and presentation purposes**.  
-All content, design, and source code are the intellectual property of the author and are intended strictly for **review and inspiration only**.
-
-Unauthorized use, reproduction, or redistribution of any part of this project is strictly prohibited.
+🔗 **Live Demo:**  
+[https://basaran3mir.github.io/promo-code-landing/](https://basaran3mir.github.io/promo-code-landing/)
 
 ## 📝 Description
 
-This promotional page was created to highlight a particular offering with clear, focused design and user experience in mind.  
-It is optimized for simplicity, responsiveness, and clarity of message, using clean and modern front-end development techniques.
+This landing page was built with simplicity, clarity, and responsiveness in mind.  
+It focuses on delivering a strong visual message to encourage user interaction — such as claiming a discount, exploring a product, or signing up for a service.
+
+The layout and content are optimized for single-purpose campaigns, and the code structure supports easy customization and reuse.
+
+## 🚀 Highlights
+
+- ✅ Clean and responsive HTML/CSS structure  
+- 🎯 Optimized for clarity and conversion  
+- 🧩 Modular sections
+- ⚙️ Lightweight, no frameworks required  
+
+## 📌 Usage
+
+This project is shared for **demonstration and review purposes only**.  
+The design and source code are **not intended for commercial reuse or redistribution.**
