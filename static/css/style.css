@@ -1,4 +1,16 @@
- /*need to add root and colors as variables*/
+:root {
+    --color-text: #333;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-light-gray: #ccc;
+    --color-gray: #ddd;
+    --color-dark-gray: #444;
+    --text-shadow-dark: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    --box-shadow-main: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    --box-shadow-strong: -10px -10px 0px rgba(0, 0, 0, 1);
+    --gradient-main: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    --gradient-mobile: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+}
 
 * {
     margin: 0;
@@ -9,7 +21,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #333;
+    color: var(--color-text);
     line-height: 1.6;
 }
 
@@ -18,12 +30,12 @@ button {
 }
 
 .promotion-intro {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/stadium-bgn.png);
+    background: var(--gradient-main), url(../images/stadium-bgn.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 821px;
     text-align: center;
-    color: #fff;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +60,7 @@ button {
 
 .promotion-intro .promotion-summary h1 {
     margin-bottom: 5px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: var(--text-shadow-dark);
 }
 
 .promotion-intro .promotion-summary h2 {
@@ -58,13 +70,13 @@ button {
 .promotion-intro .promotion-summary p {
     font-size: 1rem;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: var(--text-shadow-dark);
 }
 
 .promotion-intro .promotion-summary .start-button {
     display: inline-block;
-    background: white;
-    color: black;
+    background: var(--color-white);
+    color: var(--color-black);
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 4px;
@@ -72,26 +84,27 @@ button {
 }
 
 .promotion-intro .promotion-summary .start-button:hover {
-    background: #ddd;
+    background: var(--color-gray);
 }
 
 .promotion-content {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .promotion-content .section {
-    background: #ffffff;
+    background: var(--color-white);
     padding: 40px 20px;
     border-radius: 8px;
     max-width: 800px;
-    margin: 20px 0px;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-main), var(--box-shadow-main);
 }
 
 .promotion-content .section.form-section {
+    margin-top: -120px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -113,7 +126,7 @@ button {
 .promotion-content .section.form-section form input[type="text"] {
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-light-gray);
     border-radius: 4px;
     margin-bottom: 20px;
 }
@@ -123,8 +136,8 @@ button {
     width: fit-content;
     margin: 0 auto;
     display: inline-block;
-    background: black;
-    color: white;
+    background: var(--color-black);
+    color: var(--color-white);
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 4px;
@@ -132,39 +145,39 @@ button {
 }
 
 .promotion-content .section.form-section form button:hover {
-    background: #444;
+    background: var(--color-dark-gray);
 }
 
-.promotion-content .section.campaign-section {
-    color: black; /*need to edit margin*/
+.promotion-content .section.info-section {
+    color: var(--color-black);
 }
 
-.promotion-content .section.campaign-section h2 {
+.promotion-content .section.info-section h2 {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
-.detail-item { /*need to edit class names etc*/
-    padding: 10px;
+.promotion-content .section.info-section .info-item {
+    padding-bottom: 20px;
 }
 
-.detail-item .detail-item-top {
+.promotion-content .section.info-section .info-item .info-item-top {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-gray);
     cursor: pointer;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     margin-bottom: 15px;
     position: relative;
 }
 
-.detail-item .detail-item-header {
+.promotion-content .section.info-section .info-item .info-item-header {
     font-weight: 600;
     flex: 1;
     position: relative;
 }
 
-.detail-item-header::after {
+.promotion-content .section.info-section .info-item .info-item-header::after {
     content: "+";
     font-weight: bold;
     font-size: 1.2rem;
@@ -174,52 +187,47 @@ button {
     transform: translateY(-50%);
 }
 
-.detail-item-bottom {
-    max-height: 0;
+.promotion-content .section.info-section .info-item .info-item-bottom {
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: height 0.3s ease;
 }
 
-.detail-item.open .detail-item-bottom {
-    max-height: 200px;
-}
-
-.detail-item.open .detail-item-header::after {
+.promotion-content .section.info-section .info-item.open .info-item-header::after {
     content: "-";
 }
 
-.help {
+.promotion-content .section.support {
     font-style: italic;
-    background: #ffffff;
+    background: var(--color-white);
     padding: 40px 20px;
     margin: -25px auto 0;
     position: relative;
     z-index: 3;
     border-radius: 8px;
     max-width: 275px;
-    margin-bottom: 50px;
-    border: 4px solid black;
-    box-shadow: -10px -10px 0px rgba(0, 0, 0, 1);
+    border: 4px solid var(--color-black);
+    box-shadow: var(--box-shadow-strong);
     transform: skewX(-5deg);
 }
 
-.help a {
-    color: black;
+.promotion-content .section.support a {
+    color: var(--color-black);
     text-decoration: underline;
 }
 
-.help a:hover {
+.promotion-content .section.support a:hover {
     text-decoration: none;
 }
 
 @media (max-width: 768px) {
 
     .promotion-intro {
-        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(../images/stadium-bgn.png);
+        background: var(--gradient-mobile), url(../images/stadium-bgn.png);
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .promotion-intro .promotion-summary {
@@ -237,16 +245,16 @@ button {
         margin-top: auto;
     }
 
-    .section {
-        max-width: calc(100% - 40px);
+    .promotion-content {
+        height: 100vh;
+        justify-content: center;
     }
 
-    .form-section {
-        margin-top: 20px;
-    }
-
-    .form-section form {
+    .promotion-content .section.form-section form {
         width: 100%;
     }
 
+    .promotion-content .section.form-section {
+        margin-top: 0px;
+    }
 }
