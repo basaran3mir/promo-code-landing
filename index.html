@@ -34,7 +34,7 @@
         <div class="section form-section" id="formSection">
             <form id="promoForm" action="#" method="post">
                 <h2>IMEI Number</h2>
-                <input type="text" id="imeiInput" placeholder="IMEI number of the product you purchased" required>
+                <input id="imeiInput" type="text" inputmode="numeric" required oninput="this.value = this.value.replace(/\D/g, '').slice(0, 15)" placeholder="IMEI number of the product you purchased" required>
                 <button type="button" id="promoButton">GET YOUR CODE</button>
             </form>
         </div>
